@@ -1,9 +1,97 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>mokshit music player</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-    <h1>it is music time</h1>
-  
-  </body>
+
+<body>
+
+    <div class="player">
+
+        <header>
+            <h1>🎵 My Music Player</h1>
+            <p>10 Songs</p>
+        </header>
+
+        <div class="now-playing">
+            <div class="album-art" id="albumArt">
+                🎵
+            </div>
+
+            <h2 id="songTitle">Select a song</h2>
+            <p id="songNumber">No song playing</p>
+        </div>
+
+        <audio id="audio"></audio>
+
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+
+            <button id="shuffleBtn" title="Shuffle">
+                🔀
+            </button>
+
+            <button id="previousBtn" title="Previous">
+                ⏮️
+            </button>
+
+            <button id="playBtn" class="play-button" title="Play">
+                ▶️
+            </button>
+
+            <button id="nextBtn" title="Next">
+                ⏭️
+            </button>
+
+            <button id="repeatBtn" title="Repeat">
+                🔁
+            </button>
+
+        </div>
+
+        <div class="volume">
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+            >
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search songs..."
+            >
+        </div>
+
+        <div class="playlist" id="playlist">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
